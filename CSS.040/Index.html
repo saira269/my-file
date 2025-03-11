@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style> 
+       body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f4f8;
+    }
+
+    /* Building Team Section */
+    .team-section {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: rgba(113, 187, 187, 0.938);
+      
+    }
+
+    .team-section h2 {
+        margin-bottom: 10px;
+    }
+
+    .team-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .team-member {
+        background: rgba(240, 144, 189, 0.986);
+        border-radius: 10px;
+        padding: 40px;
+        box-shadow: 0 2px 5px rgba(233, 15, 15, 0.952);
+        text-align: center;
+        margin-left: 50px;
+        width: 200px;
+        height: 300px;
+    
+    }
+
+    .team-member img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+        border: 2px solid rgb(119, 5, 113);
+       
+    }
+
+    .social-links {
+        margin-top: 10px;
+    }
+
+    .social-links a {
+        margin: 5px;
+        text-decoration: none;
+        color: #333;
+    }
+
+    /* Footer Section */
+    footer {
+        background-color: rgb(98, 139, 60);
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 20px 0;
+    }
+
+    .footer-section {
+        flex: 1;
+        min-width: 150px;
+        margin: 10px;
+    }
+
+    .footer-section h4 {
+        margin-top: 0;
+    }
+
+    .subscribe {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .subscribe input {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .subscribe button {
+        padding: 10px;
+        background-color: #380bda;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .social-icons a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+
+    .legal {
+        margin-top: 20px;
+    }
+
+
+ /* Footer Section */
+ footer {
+            background-color: rgb(219, 102, 190);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 150px;
+            margin: 10px;
+        }
+
+        .footer-section h4 {
+            margin-top: 0;
+        }
+
+        .subscribe {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .subscribe input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .subscribe button {
+            padding: 10px;
+            background-color: #5cb85c;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            padding: 50px 50px;
+        }
+
+        .legal {
+            margin-top: 20px;
+        }
+
+        /* Contact Form Section */
+        .contact-section {
+            padding: 40px 20px;
+            border: #007bff;
+            background-color: rgba(172, 72, 172, 0.226);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 330px;
+            height: 330px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .map {
+            width: 400px;
+            height: 400px;
+            background-color: #e0e0e0; /* Placeholder for map */
+            border-radius: 10px;
+            
+        }
+
+        .contact-info {
+            text-align: left;
+            
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+           
+        }
+        .mapswrapper{
+        margin-right: 150px;
+    }
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: primary-color;
+    padding: 1rem;
+
+    .logo{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    nav {
+        ul {
+            display: flex;
+            list-style: none;
+
+            li {
+                margin: 0 1rem;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    transition: color 0.3s;
+
+                    &:hover {
+                        color: darkgreen;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+
+        .bar {
+            height: 3px;
+            width: 25px;
+            background: black;
+            margin: 3px 0;
+        }
+    }
+   
+}
+
+.hero {
+    background: orange;
+    color: white;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 80vh;
+    text-align: center;
+
+    .hero-content {
+        max-width: 600px;
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        img{
+           margin-top: 500px  0px;
+        } 
+
+        button {
+            padding: 0.5rem 1rem;
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background 0.3s;
+
+            &:hover {
+                background: darkgreen;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: primary-color;
+        width: 100%;
+        top: 60px;
+
+        li {
+            margin: 0;
+        }
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
+/* Responsive product card */
+
+body {
+    background-color: #007bff;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Container Styling */
+.product-container {
+    height: 100px;
+    text-align: center;
+    padding: 15px;
+    background-color: #3b82f6;
+    color: #fff;
+}
+
+.product-container h1 {
+    margin-bottom: 10px;
+}
+
+.product-container h2 {
+    /* margin-bottom: 30px; */
+    margin: 20px 50px;
+    font-weight: 300;
+}
+
+/* Cards Wrapper 3 cards ko style de rha ha */
+.product-cards {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+     flex-wrap: wrap; 
+    background: #f58b70;
+    padding: 50px;
+    border-radius: 8px;
+    /* border: 2px solid rgb(221, 9, 9) ; */
+
+}
+
+
+
+/* card 3 styling start from here */
+.card h3 {
+    margin: 10px 0;
+    /* border: 2px solid black; */
+}
+
+.card .price {
+    color: #333;
+    margin: 10px 0;
+}
+
+.card .price span {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 14px;
+}
+
+/* Buttons Styling */
+.card .buttons button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card .buttons button:first-child {
+    background-color: #3b82f6;
+    color: #b63e0f;
+}
+
+.card .buttons button:last-child {
+    background-color: #dda1e9;
+    color: #000;
+}
+
+/* Rating Stars */
+.card .rating {
+    margin-top: 10px;
+    color: #ffbb00;
+    font-size: 18px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-cards {
+        
+        flex-direction: column;
+        align-items: center;
+        /* border: 2px solid black; */
+    }
+}
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+    <!-- Building Team Section -->
+<div class="team-section">
+    <h2>BUILDING TEAM</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, explicabo.</p>
+    <div class="team-container">
+        <div class="team-member">
+            <img src="./img5.jpg.jpg" alt="" height="380px" width="300px">
+            <h3>Building Team</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, inventore!</p>
+            <div class="social-links">
+                
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-square-whatsapp"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+        <br>
+
+
+        <div class="team-member">
+            <img src="./img7.jpg.jpg" alt=""  height="380px" width="300px">
+            <h3>Amanda</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, inventore! Lorem ipsum dolor sit amet.</p>
+            <div class="social-links">
+              
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-square-whatsapp"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+             
+            
+            </div>
+        </div>
+        <br>
+
+
+        <div class="team-member">
+            <img src="./img8 (1).jpg" alt="" height="380px" width="300px">
+            
+            <h3>Wang Yibo</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, inventore! Lorem ipsum dolor sit amet.</p>
+            <div class="social-links">
+                <!-- <a href="#">Facebook</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Email</a>
+                <a href="#">WhatsApp</a> -->
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-square-whatsapp"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+
+<center>
+    <h1 style="color: #ff0022;"> CONTACT INFORMATION</h1>
+    </center>
+    <!-- Contact Form Section -->
+    <div class="contact-section">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <input type="text" placeholder="Full Name" required>
+            <input type="Contect No" placeholder="Contact No" required>
+            <input type="email" placeholder="Email Address" required>
+             <input type="text" placeholder="Text Message" required>
+            <text placeholder="Message " required></text>
+            <button type="submit">Send Message</button>
+        </div>
+       <div class="mapswrapper"><iframe width="340" height="420" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=pakistan%20karachi%20bmj%20digital%20education&zoom=10&maptype=roadmap"></iframe><a href="https://www.lawod.com/roblox-peroxide-codes/">Roblox Peroxide Codes</a><style>.mapswrapper{background:#fff;position:relative}.mapswrapper iframe{border:0;position:relative;z-index:2}.mapswrapper a{color:rgba(0,0,0,0);position:absolute;left:0;top:0;z-index:0}</style></div>
+    </div>
+    <br>
+
+
+
+
+    <center> <div class="logo" style="color: #3f2fcf; font-size: x-large;">RESPONSIVE HERO SECTION</div></center>
+    <br>
+   
+     <div class="menu-toggle" id="mobile-menu">
+         <span class="bar"></span>
+         <span class="bar"></span>
+         <span class="bar"></span>
+     </div>
+ </header>
+ <section class="hero">
+     <div class="hero-content">
+                <img src="./img15.jpg.jpg"alt="img"  height="300px" width="300px"  >
+         <h1>Plants</h1>
+         <p>Are you thinking about adopting a plant? From Ferns and Succulents, to Rubber trees and Parlour plants, we have little something to freshen up your living space or to give to your loved ones as a gift.</p>
+         <button>EXPLORE</button> 
+     </div>
+    </section>
+
+
+
+    <br>
+    <br>
+    <!-- Footer Section -->
+    <center><h1 style="color: #3f2fcf;">FOOTER</h1></center>
+    <footer>
+        
+        <div class="footer-container">
+           
+            <div class="footer-section">
+                <h4>About</h4>
+                <ul>
+                    <li>Services</li>
+                    <li>Portfolio</li>
+                    <li>Pricing</li>
+                    <li>Customers</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li>Docs</li>
+                    <li>Blog</li>
+                    <li>eBooks</li>
+                    <li>Webinars</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li>Help</li>
+                    <li>Sales</li>
+                    <li>Advertise</li>
+                </ul>
+            </div>
+            <div class="footer-section subscribe">
+                <h4>Stay Updated</h4>
+                <p>Subscribe to our newsletter to get our latest news.</p>
+               
+                <button type="submit">Subscribe</button>
+            </div>
+        </div>
+        <div class="social-icons">
+            <!-- <a href="#">Facebook</a>
+            <a href="#">Twitter</a> -->
+            
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-square-whatsapp"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            
+            
+        </div>
+        <div class="legal">
+            <p>Terms & Conditions | Privacy Policy</p>
+            <p>© 2019 Copyright Nowrap Inc.</p>
+        </div>
+    </footer>
+    <br>
+    <br>
+    <br>
+
+<!-- cards session start from here -->
+
+<!-- cards 1 -->
+<div class="product-container">
+    <h1>Responsive Product Card</h1>
+
+     <h2>New Arrival</h2>
+    <div class="product-cards">
+      
+        <!-- Card 1 -->
+        <div class="card">
+          
+           
+            <img src="./img13.jpg.jpg" alt="Shoe" height="200px" width="250px">
+            <h3>Shoe</h3>
+            <p class="price">Price: $150 <span>$175</span></p>
+            <div class="buttons">
+                <button>Buy</button>
+
+                <button>Add to Cart</button>
+            </div>
+            <div class="rating">
+                ★★★★☆
+            </div>
+        </div>
+
+
+
+<!-- card 2 -->
+  <!-- Card 2 -->
+  <div class="card">
+    <img src="./img12.jpg.jpg" alt="Blazer" height="200px" width="250px">
+    <h3>Blazer</h3>
+    <p class="price">Price: $80 <span>$120</span></p>
+    <div class="buttons">
+        <button>Buy</button>
+        <button>Add to Cart</button>
+    </div>
+    <div class="rating">
+        ★★★★☆
+    </div>
+</div>
+
+
+
+
+    <!-- Card 3 -->
+    <div class="card">
+        <img src="./img14.jpg.jpg" alt="Watch" height="200px" width="250px">
+        <h3>Watch</h3>
+        <p class="price">Price: $175 <span>$200</span></p>
+        <div class="buttons">
+            <button>Buy</button>
+            <button>Add to Cart</button>
+        </div>
+        <div class="rating">
+            ★★★★☆
+        </div>
+    </div>
+</div>
+
+
+
+<div class="text"><h1>HTML & CSS</h1></div>
+</div>
+
+ 
+</body>
+</html>
