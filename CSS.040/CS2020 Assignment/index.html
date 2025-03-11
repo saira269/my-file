@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Managment App</title>
+    <script>https://code.jquery.com/jquery-3.6.0.min.js</script>
+    <style>
+    body{
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #fffefe;
+        width: 50%px;
+
+    }  
+     h1{
+        color: green;
+     }  
+     p{
+        color: rgba(27, 27, 206, 0.527);
+     }
+     #time{
+        font-size: 18px;
+        margin: 10px 0px;
+     }
+     #toggleButton{
+        margin: 10px 0px;
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: rgb(243, 241, 241);
+        border: none;
+        cursor: pointer;
+
+     }
+     ui{
+        list-style-type: none;
+        /* padding-right: 100px; */
+        margin-right: 100px;
+     }
+     li{   
+        list-style-type: none;
+        background-color: rgba(212, 206, 206, 0.753);
+        padding: 10px;
+        padding-right: 10px;
+        margin: 5px auto;
+        border-radius: 5px;
+        width: 40%;
+        text-align: left;
+     }
+      li:hover{
+        background-color: rgb(50, 126, 212);
+   }
+
+      #taskInput{
+
+        padding: 10px;
+        width: 200px; 
+        border-radius: 5px;
+
+
+
+
+
+
+        
+        border: none;
+        outline: none;
+        font-size: 20px; 
+ 
+        
+    
+      }
+      #addTaskButton{
+      padding: 10px 50px;
+        border-radius: 5px;
+        border: none;
+        color: rgb(235, 218, 218);
+        cursor: pointer;
+        background-color: rgb(47, 175, 226);
+        margin: 25px 0px 0px 25px;
+       
+    }  
+   
+        </style>
+
+</head>
+<body>
+    <div class="body">
+  
+    <h1>Take Managment App</h1>
+     <p id="description">This app helps to manage your tasks effectively</p>
+    <div id="time"></div>
+    <button id="toggleButton">Show/Hide Paragraph</button>
+    <ul id="taskList">
+        <li>Task 1</li>
+        <li>Task 2</li>
+        <li>Task 3</li>
+        <li>Task 4</li>
+        <li>Task 5</li>
+    </ul>
+        <input type="text" id="taskInput" placeholder="Enter a new task">
+        <button id="addTaskButton">Add Task</button>
+       
+    </div>
+
+
+
+
+   <script>
+            setInterval(() => {
+              const now = new Date();
+              document.getElementById("time").textContent = now.toLocaleString();   
+            }, 1000);
+
+            document.getElementById("toggleButton").addEventListener("click", () => {
+                const description = document.getElementById("description");
+                if(description.style.display === "none"){
+                description.style.display = "block"
+                } else {
+                    description.style.display = "none";
+                }
+                })
+
+                $(document).ready(function (){
+                $("#addTaskButton").click(function () {
+                const task = $("#taskInput").val().trim();
+                if (task !== "") {
+                $("taskList").append('<li>${task}</li>');
+                 $("#taskInput").val("");
+                }
+                });
+
+               $(document).on("mouseenter", "#taskList li" , function () {
+                $(this).css("backgroung-color", "#ddd");
+               }).on("moucseleave","#taskList li", function () {
+                $(this).css("background-color","gray");
+               });
+               });  
+            </script>  
+
+
+
+</body>
+</html>
